@@ -8,7 +8,7 @@ pipeline {
     
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
-        DOCKER_NAME  = 'harishnshetty/paymentservice'
+        DOCKER_NAME  = 'dinusha2001/paymentservice'
         IMAGE_NAME   = 'paymentservice'
     }
 
@@ -117,7 +117,7 @@ pipeline {
                 dir('src/paymentservice') {
                     withCredentials([string(credentialsId: 'docker-cred', variable: 'dockerpwd')]) {
                         sh '''
-                        docker login -u harishnshetty -p ${dockerpwd}
+                        docker login -u dinusha2001 -p ${dockerpwd}
                         docker push ${IMAGE_TAG}
                         docker tag ${IMAGE_NAME} ${DOCKER_NAME}:latest
                         docker push ${DOCKER_NAME}:latest
@@ -157,7 +157,6 @@ pipeline {
                         subject: "Pipeline ${buildStatus}: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                         body: """
                             <p>paymentservice Google-Shop DevSecOps pipeline status.</p>
-                            <p>Youtube Link :- https://www.youtube.com/@devopsHarishNShetty </p>
                             <p>Project: ${env.JOB_NAME}</p>
                             <p>Build Number: ${env.BUILD_NUMBER}</p>
                             <p>Build Status: ${buildStatus}</p>
