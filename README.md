@@ -1,8 +1,7 @@
 #  Online shopping E-commerce Website and 11 MicroService DevSecops Project with K8s, Gitops.
 
 ## This project Forked from the https://github.com/GoogleCloudPlatform/microservices-demo (Org source)
-
-## For more projects, check out  
+ 
 
 **Online Boutique** is a cloud-first microservices demo application.  The application is a
 web-based e-commerce app where users can browse items, add them to the cart, and purchase them.
