@@ -3,14 +3,16 @@
 ## This project Forked from the https://github.com/GoogleCloudPlatform/microservices-demo (Org source)
  
 
-**Online Boutique** is a cloud-first microservices demo application.  The application is a
-web-based e-commerce app where users can browse items, add them to the cart, and purchase them.
+
 
 
 ## Architecture
+![alt text](image.png)
 
-[![Architecture of
-microservices](/docs/img/architecture-diagram.png)]
+**Online Boutique** is a cloud-first microservices demo application.  The application is a
+web-based e-commerce app where users can browse items, add them to the cart, and purchase them.
+![Architecture of
+microservices](/docs/img/architecture-diagram.png)
 
 
 | Service                                              | Language      | Description                                                                                                                       |
@@ -67,8 +69,8 @@ This guide assumes an Ubuntu/Debian-like environment and sudo privileges.
 | HTTP            | 80    |
 | HTTPS           | 443   |
 | SSH             | 22    |
-| Jenkins         |       |
-| SonarQube       |       |
+| Jenkins         |   8080    |
+| SonarQube       |   9000    |
 
 ## System Update & Common Packages
 
@@ -309,7 +311,8 @@ Webhook example:
 ---
 # Now See the configuration pipeline of the Jenkins
 
-
+![alt text](image-3.png)
+![alt text](image-4.png)
 
 ## EKS ALB Ingress Kubernetes Setup Guide
 # EKS cluster setup and  ALB Ingress Kubernetes Setup Guide
@@ -573,7 +576,8 @@ kubectl get svc -n prometheus
 | Kubernetes Monitoring Dashboard | 12740 |
 | Node Exporter | 1860 |
 | Kubernetes / Views / Namespace | 15758 |
-
+![alt text](image-1.png)
+![alt text](image-2.png)
 ---
 ---
 
@@ -611,7 +615,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 ---
 Password: encrypted-password
 ---
-
+![alt text](image-5.png)
 ##  Delete EKS Cluster (Cleanup) finally u done a project 
 
 
